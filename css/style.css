@@ -279,6 +279,7 @@ img {
   padding: 6px 22px 6px 22px;
 
   border: none;
+  border-radius: 4px;
   
 }
 
@@ -286,6 +287,7 @@ img {
 .button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  
 }
 
 .button.pre-hero {
@@ -526,7 +528,6 @@ margin-bottom: 30px;
   border-radius: 4px;
 }
 
-
 .about-company{
   margin: 16px 32px;
   fill: #AFB1B8;
@@ -599,6 +600,7 @@ margin-bottom: 30px;
 
 .second-icon{
  fill: #FFFFFF;
+
 }
 
 .master-social.bg-icon{
@@ -626,12 +628,14 @@ margin-bottom: 30px;
 
 .wrap-filtr{
   margin-right: 8px;
-  
 }
+
 
 .wrap-filtr:not(last-child){
   margin-right: 8px;
 }
+
+
 
 .wrap-work{
   display: flex;
@@ -645,15 +649,22 @@ margin-bottom: 30px;
   margin-bottom: 30px;
 }
 
+.wrap-item:hover,
+.wrap-item:focus{
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  
+}
+
+
+
 
 .description{
-  padding-top: 20px;
+ padding-top: 20px;
  padding-bottom: 20px;
  padding-left: 24px;
  padding-right: 24px;
- border-left: 1px solid #EEEEEE;
- border-right: 1px solid #EEEEEE;
- border-bottom: 1px solid #EEEEEE;;
+ border: 1px solid #EEEEEE;
 }
 
 .subject-item {
