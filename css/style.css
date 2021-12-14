@@ -20,6 +20,7 @@
   --primary-white-color: #ffffff;
   --secondary-bg-color: #2f303a;
   --primary-bg-button: #f5f4fa;
+  --var-logo-icon-contact:#757575;
 }
 
 body {
@@ -179,10 +180,13 @@ img {
 
 .contacts-about{
   margin-right: 50px;
+  
 }
 .contacts-about:last-child{
   margin-right: 0;
 }
+
+
 
 
 .contact-mail,
@@ -193,12 +197,10 @@ img {
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-decoration: none;
+  fill:currentColor;
 }
 
 
-.contact-mail{
- margin-right: 50px;
-}
 
 .contact-mail:hover,
 .contact-mail:focus,
@@ -207,19 +209,49 @@ img {
   color: var(--accent-color);
 }
 
+.contact-mail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
+.contact-phone{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-mail-icon{
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contact-phone-icon{
+  margin-right: 10px;
+  fill: currentColor;
+}
 
 
 
 /* Hero */
 .hero {
-  background-color: var(--secondary-bg-color);
   padding-top: 200px;
   padding-bottom: 200px;
-
+  background-color: var(--secondary-bg-color);
+  background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+   url(../image/imgbaground.jpg);  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 1600px;
+  max-height: 600px;
+  left: 0px;
+  margin: 0px auto;
   
+ 
 }
+
+
 
 .hero-title {
   color: var(--primary-white-color);
@@ -256,7 +288,7 @@ img {
   background-color: var(--accent-color);
 }
 
-.button.hero {
+.button.pre-hero {
   color:var(--primary-white-color);
   background-color: var(--accent-color);
   font-weight: 700;
@@ -294,6 +326,18 @@ img {
 
 .about-item:last-child{
   margin-right: 0px;
+}
+
+.thumb{
+width: 270px;
+height: 120px;
+background: #F5F4FA;
+border-radius: 4px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 30px;
+  
 }
 
 
@@ -357,24 +401,30 @@ img {
 
 .cards{
   display: flex;
+  
 }
 
 .image-command {
   margin-right: 30px;
   width: 370px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .cards-image{
   padding-top: 30px;
   padding-bottom: 30px;
-  
 }
 
 
 
 .section.command{
   background-color: #F5F4FA;
+  box-shadow: 4px, 4px rgba(0, 0, 0, 0.25);
+  
 }
+
 
 
 .section-title {
@@ -406,6 +456,86 @@ img {
   letter-spacing: 0.03em;  
   text-align: center;
 }
+.master-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.master-social{
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  color: #ffffff;
+  
+}
+
+.master-social:last-child{
+  margin-right: 10px;
+}
+
+.master-social:hover,
+.master-social:focus{
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  fill: #ffff;
+  
+
+}
+
+.master-social{
+  fill: #AFB1B8;
+}
+
+
+.box-company{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.box-list{
+  margin-right: 30px;
+}
+
+.box-list:last-child{
+  margin-right: 30px;
+}
+
+
+.box-link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+ 
+}
+
+.box-link:hover,
+.box-link:focus{
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+
+.about-company{
+  margin: 16px 32px;
+  fill: #AFB1B8;
+}
+
+.about-company:hover,
+.about-company:focus{
+  fill: var(--accent-color);
+}
 
 /* Footer */
 .footer {
@@ -415,6 +545,12 @@ img {
  
 }
 
+.page-footer{
+  display: flex;
+  margin-right: auto;
+}
+
+
 .address {
   color:var(--primary-white-color);
   font-style: normal;
@@ -422,7 +558,8 @@ img {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-
+  
+  
   margin-top: 20px;
   
 }
@@ -435,6 +572,8 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
+  display: block;
+  margin-top: 9px;
 
 
 }
@@ -446,16 +585,34 @@ img {
   color: var(--accent-color);
 }
 
-.footer-item{
-  margin-bottom: 9px;
-  width: 231px;
-  height: 21px;
-  display:block;
+
+
+.work{
+    color: var(--primary-white-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
 }
 
-.footer-item:last-child{
-  margin-bottom: 0;
+.second-icon{
+ fill: #FFFFFF;
 }
+
+.master-social.bg-icon{
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.bg-icon:hover,
+.bg-icon:focus{
+  background-color: var(--accent-color);
+}
+
+
+
 
 /* Css для portfolio */
 
