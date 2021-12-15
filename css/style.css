@@ -416,7 +416,6 @@ margin-bottom: 30px;
 
 .cards-image{
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 
@@ -461,8 +460,11 @@ margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 16px 32px 30px 32px;
   
 }
+
+
 
 .master-social{
   width: 44px;
@@ -470,14 +472,11 @@ margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
   color: #ffffff;
-  
+  fill: #AFB1B8;
 }
 
-.master-social:last-child{
-  margin-right: 10px;
-}
+
 
 .master-social:hover,
 .master-social:focus{
@@ -485,11 +484,10 @@ margin-bottom: 30px;
   border-radius: 50%;
   fill: #ffff;
   
-
 }
 
-.master-social{
-  fill: #AFB1B8;
+.master-item-social:not(:last-child){
+  margin-right: 10px;
 }
 
 
@@ -499,15 +497,9 @@ margin-bottom: 30px;
   align-items: center;
 }
 
-
-.box-list{
+.box-list:not(:last-child){
   margin-right: 30px;
 }
-
-.box-list:last-child{
-  margin-right: 30px;
-}
-
 
 .box-link {
   width: 170px;
@@ -517,26 +509,33 @@ margin-bottom: 30px;
   align-items: center;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
- 
+  box-sizing: border-box;
 }
 
-.box-link:hover,
-.box-link:focus{
-  color: var(--accent-color);
+
+.box-link:hover{
+  border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+.box-link:focus {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
-  
+}
+
+.box-link:hover svg{
+  fill: var(--accent-color);
+}
+
+.box-link:focus svg{
+  fill: var(--accent-color);
 }
 
 .about-company{
-  margin: 16px 32px;
   fill: #AFB1B8;
-}
+} 
 
-.about-company:hover,
-.about-company:focus{
-  fill: var(--accent-color);
-}
+
+
 
 /* Footer */
 .footer {
@@ -606,22 +605,36 @@ margin-bottom: 30px;
     
 }
 
-.second-icon{
- fill: #FFFFFF;
-
+.master-item-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.item-footer-icon:not(:last-child) {
+   margin-right: 10px;
+}
 
-.master-social.bg-icon{
+.master-bg-icon{
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #FFFFFF;
+
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  
 }
 
-.bg-icon:hover,
-.bg-icon:focus{
+.master-bg-icon:hover,
+.master-bg-icon:focus{
   background-color: var(--accent-color);
+  border-radius: 50%;
+  fill: #ffff;
+  
 }
-
 
 
 
